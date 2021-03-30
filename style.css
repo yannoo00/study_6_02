@@ -1,0 +1,267 @@
+  
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style:none;
+    text-decoration: none; 
+    border-collapse:collapse; /*table 테두리가 서로 붙도록 함*/
+    margin:0px;
+    padding:0px;
+    color:#000;
+ }
+
+ .intro_bg{
+     background-image:url("image/intro.png");
+     width:1920px; /*100% - 이상하게 나옴 / 가로를 페이지 화면에 맞춰 나오도록 하려면 어떻게 해야 하나요?*/
+     height:718px;
+     border-radius:5px;
+ }
+
+ .header{
+     display:flex;
+     width:1280px;
+     margin:auto; /*자동으로 가운데 정렬*/
+     height:86px;
+ }
+ 
+ .search_area{
+     width:300px;
+     height:40px;
+     background:rgba(0,0,0,0.5);
+     border-radius: 5px; /*border 둥글기*/
+     margin-top:24px;
+ }
+
+ .search_area > form > input{
+     border:none;
+     width:210px;/*250px - 300px보다 50px이나 작은데 같은 크기로 나옴 왜?*/
+     height:40px;
+     background:rgba(0,0,0,0.0);
+     color:#fff;
+     padding-left:10px;
+ }
+
+ .search_area > form > span{
+     width:50px;
+     color:#fff;
+     font-weight: bold;
+     cursor:pointer;
+ }
+
+ .nav{
+    display:flex; /*class가 nav안에 있는 block 태그들을 한 줄안에 배열*/
+    justify-content : flex-end; /*flex-start는 왼쪽 정렬*/
+    line-height: 86px;
+    width:calc(1280px - 300px);
+ }
+
+ .nav > li{
+     margin-left:84px;
+ }
+ .nav > li > a{
+    color:#fff; /*white 또는 #000 써도 됨*/
+ }
+
+ .intro_text{
+     width:100%;
+     margin:231px auto 231px auto;
+     text-align:center;
+ }
+
+  h1{
+     font-size: 48px;
+     font-weight:100;
+ }
+
+ .contents1{
+    font-size : 20px;
+    font-weight: lighter;
+}
+ 
+ .contents3{
+    font-size:14px;
+    font-weight:100;
+ }
+
+ .contents1_bold{
+     font-size:18px;
+     font-weight: bold;
+ }
+
+/* --- */
+
+ .result{
+    font-size:24px;
+}
+
+ .intro_text > h1,
+ .intro_text > h4{
+     color:#fff;
+ }
+ 
+ .amount{
+     position:relative;
+     top: -66px; /*보기에만 66px 올라간 듯 보이는 것 + 원래 위치는 변하지 않는다*/
+     display: flex;
+     width:1280px;
+     background:white;
+     box-shadow : 0px 0px 10px rgba(0,0,0,0.5); /*오른쪽(양수)왼쪽(음수) 그림자px 제자리(아래) 그림자px 흩뿌려진 정도px*/
+     margin:auto 320px auto 320px; /*auto 왜 안될까요?*/
+ }
+ 
+
+ .amount > li {
+     flex: 1; /* flex로 인해 block들은 한 라인에 배열되게 되는데 배열된 block 개수만큼 너비를 나눠 생긴 공간을 block들로 하여금 한자리씩 차지하라는 의미*/
+     height:132px;
+ }
+
+ .amount > li > div {
+     text-align: center;   
+     margin-top:37px;
+     height:57px;
+}
+
+ .amount > li:not(:last-child) > div{
+     border-right:1px solid #E1E1E1;
+}
+
+/* main_text */
+.main_text0{
+    /*position으로 올리게 되면, 아래의 내용돌도 모두 position을 사용해 올려야 하는 경우가 발생하기 때문에, block 자체의 위치를 옮겨 아래의 내용을 추가로 밀어도 되지 않도록 설정하는 행위가 필요하다.*/
+    width:1920px; /*100%*/
+    height:601px;
+    margin-top :-132px; /*block을 이동했다기보다는 margin을 줄여서 올라간 것이지만, position 재사용을 예방하기 위한 이정도의 눈속임은 필요하다. */
+    background : #f1f2f3;
+}
+
+ .main_text0 > h1{
+     padding-top:116px;
+     text-align: center;
+}
+ 
+ .main_text0 > .contents1 {
+     /*공통요소 .contents1을 가져다 쓰는 것*/
+     text-align : center;
+ }
+
+ .icons{
+     display:flex;
+     width:1280px;
+     height:302px;
+     margin:auto;
+ }
+ .icons > li{
+     flex:1; 
+     background:white;
+     margin-top:49px;
+     height:302px;
+     text-align:center;
+ }
+
+ .icons > li > .icon_img{
+     margin-top:18px;
+ }
+
+ .icons > li:not(:last-child){
+     margin-right:20px;
+ }
+
+ .icons .contents3{ /*>를 쓰면 순서대로 타고 들어가야 하지만, > 없이 원하는 클래스명을 바로 씀으로써 점프해서 들어갈 수 있다. icon 클래스의 contents3클래스에 해당하는 것 모두에게 적용*/
+     width:240px;
+     margin:auto;
+     letter-spacing:-1px;
+     margin-top:8px;
+ }
+
+ .more{
+     /*배경*/
+     width:100px;
+     height:30px;
+     background:#2F7AF4;
+     /*글자*/
+     color : #fff;
+     font-size:12px;
+     line-height : 30px;
+     margin : 25px auto;
+ }
+
+ /* main_text1 */
+  .main_text1{
+      width:1920px; /*100%*/
+      height:659px;
+  }
+  .main_text1 > h1{
+      padding-top : 50px;
+      text-align:center;
+  }
+
+  .main_text1 > .contents1{
+      text-align: center;
+  }
+
+  .service{
+     width:1280px;
+     height:427px;
+     display:flex;
+     margin: 49px auto;
+  }
+
+  .service > .contents3{
+      padding-left:20px; /*padding:20px;*/
+      font-size:16px; /*원래 없는 코드이지만, 따라 만드는 페이지와의 유사도를 높이기 위해서 개인적으로 고침*/
+  }
+
+  .service > .contents3 > h2{
+      margin-bottom : 27px;
+      font-size:24px; /*원래 없는 코드이지만, 따라 만드는 페이지와의 유사도를 높이기 위해서 개인적으로 고침*/
+  }
+
+  /* main_text2 */
+  .main_text2 {
+      width:1920px; /*100%*/
+      height: 418px;
+      background-image: url("image/contact.png")
+  }
+
+  .main_text2 > ul{
+      display:flex;
+      padding-top: 138px;
+  }
+
+  .main_text2 > ul > li{
+      flex:1;
+      text-align: center;
+  }
+
+  .main_text2 > ul > li > div > h1,
+  .main_text2 > ul > li > div {
+      color:#fff;
+  }
+
+  .more2{
+      width: 220px;
+      height: 40px;
+      border: 1px solid #fff;
+      line-height: 40px; /*텍스트 라인의 높이*/
+      margin: 16px auto;
+      cursor: pointer;
+  }
+  
+  footer{
+      width:1920px; /*footer가 차지하는 공간이 이상하게 나와서 개인적으로 고침*/
+      display:flex;
+      background: #1f1f1f;
+      padding-top: 38px; /*footer가 차지하는 공간이 이상하게 나와서 개인적으로 고침*/
+      padding-bottom: 38px; /*footer가 차지하는 공간이 이상하게 나와서 개인적으로 고침*/
+  }
+
+  footer > div:first-child{
+      flex:3;
+      text-align:center;
+      color: #fff;
+      /* margin:auto; */ /*logo가 중간 높이에 위치토록 한다.*/
+  }
+
+  footer > div:last-child{
+      flex:9;
+      color:#fff;
+  }
